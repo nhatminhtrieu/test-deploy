@@ -16,7 +16,7 @@ Vite React app configured for CI and deployment to GitHub Pages using GitHub Act
 - Deploy: `actions/deploy-pages` runs on push (not pull requests)
 
 ## GitHub Pages setup
-- Vite `base` derives from `GITHUB_REPOSITORY`, so Pages serves at `/<repo>/`
+- Vite `base` derives from `REPOSITORY`, so Pages serves at `/<repo>/`
 - After merging to `main`, ensure Settings → Pages → Source = GitHub Actions (often auto-set)
 - Live URL pattern: `https://<user>.github.io/<repo>/`
 - Local check before deploying: `yarn build && yarn preview --host`

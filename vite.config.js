@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const repoName = process.env.GITHUB_REPOSITORY?.split('/').pop()
+const repoName = process.env.REPOSITORY?.split('/').pop()
 const base = repoName ? `/${repoName}/` : '/'
 
 // https://vite.dev/config/
