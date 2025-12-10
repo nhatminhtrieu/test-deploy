@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --main-50: #fbe5f8;
+  --main-100: #f4b3e1;
+  --main-200: #ed80ca;
+  --main-300: #e64db3;
+  --main-400: #de199c;
+  --main-500: #c70082;
+  --main-600: #9a0065;
+  --main-700: #6d0048;
+  --main-800: #40002b;
+  --main-900: #1a0014;
+
+  --muted: #64748b;
+
+  --grey-200: #f2f2f2;
+  --grey-300: #d9dad9;
+  --grey-400: #b3b5b4;
+  --grey-500: #818482;
+  --grey-600: #4f5250;
+  --grey-700: #1d211e;
+  --grey-800: #040905;
+
+  --danger: #f44336;
+  --warning: #ff9800;
+  --success: #4caf50;
+  --info: #2196f3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.asol-card {
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+
+  .ant-card-body {
+    padding: 1.25rem;
+
+    .ant-statistic-content-value {
+      font-weight: 700;
+    }
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &.mobile {
+    .ant-card-body {
+      padding: 0.7rem;
+      
+    }
+  }
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #;
+  width: 100%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: #5c5cff;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
