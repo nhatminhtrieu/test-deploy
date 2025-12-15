@@ -41,6 +41,13 @@ body {
   font-family: var(--font-tertiary);
 }
 
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1536px;
+$breakpoint-xxxl: 1920px;
+
 :root {
   --main-50: #e6f0ff;
   --main-100: #b3d1ff;
