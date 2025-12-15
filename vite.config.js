@@ -2,12 +2,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const repoName = process.env.REPOSITORY?.split('/').pop()
-const base = repoName ? `/${repoName}/` : '/'
+const repo =
+  process.env.GITHUB_REPOSITORY?.split('/').pop() ??
+  process.env.REPOSITORY?.split('/').pop()
 
-// https://vite.dev/config/
+const isUserPage = repo && repo.endsWith('.github.io')
+const base = isUserPage ? '/' : repo ? `/${repo}/` : '/'
+
 export default defineConfig({
   plugins: [react()],
-  // Keep dev root at / but serve under /<repo>/ on GitHub Pages
   base,
 })
